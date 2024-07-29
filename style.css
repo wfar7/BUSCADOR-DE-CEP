@@ -1,0 +1,110 @@
+* {
+  font-weight: 600;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 51, 160, 0.8),
+    /* Gradiente azul com opacidade */ rgba(247, 227, 0, 0.8)
+      /* Gradiente amarelo com opacidade */
+  );
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Permite que o footer fique na parte inferior */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative; /* Necessário para posicionar o pseudo-elemento */
+  overflow: hidden; /* Evita que o pseudo-elemento saia do body */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./logoAcs.a5af10e574957b973754.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100vh 100vh;
+  opacity: 0.5; /* Ajuste a opacidade conforme necessário */
+  z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo */
+}
+
+.container {
+  background-color: #ffffffbf;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #0033a0;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #ffffff81;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  border: 1px solid #0033a0;
+  border-radius: 5px;
+  background-color: #0033a0;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #002380;
+}
+
+#resultado {
+  text-align: left;
+  font-size: 18px;
+}
+
+#resultado p {
+  background-color: #ffffff81;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+#resultado span {
+  font-weight: normal;
+}
+
+footer {
+  background-color: #0033a0;
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  position: absolute; /* Posiciona o footer no fim da página */
+  bottom: 0;
+  height: 30px;
+  display: flex;
+  justify-content: center; /* Alinha horizontalmente */
+  align-items: center; /* Alinha verticalmente */
+}
